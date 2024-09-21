@@ -66,3 +66,30 @@
 .lp-button:hover {
     background-color: #7697a0;
 }
+
+/* General Responsive Styles */
+@media (max-width: 768px) {
+
+    .lp-section-2 {
+        grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns on smaller screens */
+        margin-right: 150px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .lp-section-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+        gap: 16px; /* Space between grid items */
+        width: 100%; /* Ensure the grid container takes up full width */
+        padding: 0 10px; /* Add padding to prevent content from touching screen edges */
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    }
+    
+    .lp-product {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
