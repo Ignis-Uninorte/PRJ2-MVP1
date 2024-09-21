@@ -1,4 +1,4 @@
-div.grid-container{
+div.grid-container-plp{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 0px;
@@ -16,10 +16,10 @@ nav.breadcrumb{
     align-items: center;
     margin: 0px;
     padding: 0.5%;
-    background-color: #ff9d9d;
+    background-color: #ffffff;
 }
 
-section.information-above{
+section.information-above-plp{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,23 +28,23 @@ section.information-above{
     grid-column: 2/4;
     margin: 0px;
     padding: 10px 20px;
-    background-color: #000757;
+    background-color: #dcdcdc;
 }
 
-section.information-above p{
+section.information-above-plp p{
     margin: 0;
     padding: 0px 5px;
     color: #173B61;
 }
 
-div.orderby {
+div.orderby-plp{
     margin: 0px;
     display:block;
     text-align: center;
     padding: 2px;
 }
 
-div.orderby h4{
+div.orderby-plp h4{
     margin: 0;
 }
 
@@ -63,7 +63,7 @@ aside.filter{
     background-color: #ff9d9d;
 }
 
-section.content{
+section.content-plp{
     grid-row: 3;
     grid-column: 2/4;
     display: flex;
@@ -71,7 +71,27 @@ section.content{
     align-items: center;
 }
 
-div.banner{
+
+section.content-plp ul{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+section.content-plp li.product{
+    background-color: #ffffff;
+    border: 2px solid #7697A0;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 10px;
+}
+
+
+
+div.banner-plp{
     grid-row: 4;
     grid-column: 1/4;
     display: flex;
@@ -83,7 +103,7 @@ div.banner{
     background-color: black;
 }
 
-div.banner img{
+div.banner-plp img{
     display:block;
     width: 80%;
     height: auto;

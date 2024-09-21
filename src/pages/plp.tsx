@@ -6,14 +6,14 @@ import bannerImg from '../assets/banner-plp.jpg';
 const Plp: React.FC = () =>{
     return (
         <MainLayout>
-            <div className="grid-container">
+            <div className="grid-container-plp">
                 <nav className="breadcrumb">
                     <p>BREADCRUM</p>
                     {/* Añadir cuando este listo en el otro punto de historia */}
                 </nav>
-                <section className="information-above">
+                <section className="information-above-plp">
                     <p>Showing 1-5 of 5 results</p>
-                    <div className="orderby">
+                    <div className="orderby-plp">
                         <h4>Order By</h4>
                         <form>
                             {/* Añadir funcionalidad */}
@@ -32,7 +32,7 @@ const Plp: React.FC = () =>{
                 </aside>
                 <section className="content">
                 </section>
-                <div className="banner">
+                <div className="banner-plp">
                     <img src={bannerImg} alt="Banner"></img>
                 </div>
             </div>
