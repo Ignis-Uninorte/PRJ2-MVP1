@@ -22,7 +22,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       </main>
        
       {/* Footer Component */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
