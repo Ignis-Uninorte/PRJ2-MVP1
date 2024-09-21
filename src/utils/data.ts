@@ -1,6 +1,4 @@
-import {Product} from "../pages/Plp"
-
-export const products: Product[] = [
+export const products = [
     {
         id: 1,
         category: "Computers",
