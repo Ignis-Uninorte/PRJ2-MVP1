@@ -2,8 +2,12 @@ import React from 'react';
 import "../styles/plp.css";
 import MainLayout from '../layouts/MainLayout';
 import bannerImg from '../assets/banner-plp.jpg';
+import {products} from '../utils/data';
+import { ProductCard } from '../components/ProductCard';
 
-const Plp: React.FC = () =>{
+
+const Plp: React.FC<{typeOfProduct : string}> = ({typeOfProduct}) =>{
+    const productCategory = products.find(product => product.category === typeOfProduct);
     return (
         <MainLayout>
             <div className="grid-container-plp">
@@ -30,14 +34,19 @@ const Plp: React.FC = () =>{
                     <h2>Filters</h2>
                     {/* Añadir cuando este listo en el otro punto de historia */}
                 </aside>
-                <section className="content">
+                <section className="content-plp">
+                    <ul>
+                        {
+                            productCategory?.items.map(item => <li className="product" key={item.id}><ProductCard product={item} /></li>)
+                        }
+                    </ul>
                 </section>
                 <div className="banner-plp">
-                    <img src={bannerImg} alt="Banner"></img>
+                    <img src={bannerImg} alt="Banner" />
                 </div>
             </div>
         </MainLayout>
         );
-    };
+};
 
 export default Plp;
