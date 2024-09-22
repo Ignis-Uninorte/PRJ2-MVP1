@@ -124,7 +124,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  /* Further adjustments for smaller mobile screens */
 
   .footer-middle {
       padding: 20px;
