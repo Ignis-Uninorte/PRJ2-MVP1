@@ -1,0 +1,12 @@
+.pimg-container {
+    width: 100%; 
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .pimg-image {
+    height:auto;
+    width: 100%; 
+    object-fit: fill; 
+  }
+  
