@@ -7,12 +7,8 @@ export type ProductItem = {
     image: string;
     rating: number;
     specifications: {
-        brand: string;
-        condition: string;
-        memoryStorage: string;
-        displaySize: string;
-        color: string;
-    }
+        [key: string]: string; // This allows any key with string
+    };
 }
 
 export type ProductList = {
