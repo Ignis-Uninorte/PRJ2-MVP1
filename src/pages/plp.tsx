@@ -11,7 +11,7 @@ const Plp: React.FC<{typeOfProduct : string}> = ({typeOfProduct}) =>{
     return (
         <MainLayout>
             <div className="grid-container-plp">
-                <nav className="breadcrumb">
+                <nav className="breadcrumb-plp">
                     <p>BREADCRUM</p>
                     {/* Añadir cuando este listo en el otro punto de historia */}
                 </nav>
@@ -30,7 +30,7 @@ const Plp: React.FC<{typeOfProduct : string}> = ({typeOfProduct}) =>{
                         </form>
                     </div>
                 </section> 
-                <aside className="filters">
+                <aside className="filters-plp">
                     <h2>Filters</h2>
                     {/* Añadir cuando este listo en el otro punto de historia */}
                 </aside>
