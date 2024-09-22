@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component from react-router-dom
 import '../styles/header.css';
-import '../styles/subheader.css';
+
 
 const Header: React.FC = () => {
   return (
@@ -8,7 +9,9 @@ const Header: React.FC = () => {
       <div className="header-container">
         {/* Logo */}
         <div className="logo">
-          <img src="src\assets\Ignis_Store_Logo.png" alt="Company Logo" />
+          <Link to="/">
+            <img src="src\assets\Ignis_Store_Logo.png" alt="Company Logo" />
+          </Link>
         </div>
 
         {/* Search Bar */}
@@ -21,21 +24,17 @@ const Header: React.FC = () => {
 
         {/* Account and Cart Links */}
         <div className="account-cart">
-          <a className="account-link" href="/account">
+          <a className="account-link" href="">
             <img src="src/assets/account-icon.svg" alt="My Account" />
             <span>My Account</span>
           </a>
           <div className="divider"></div>
-          <a className="cart-link" href="/cart">
+          <a className="cart-link" href="">
             <img src="src/assets/cart-icon.svg" alt="Cart" />
             <span>My Cart</span>
           </a>
         </div>
-      </div>
-      {/* Subheader */}
-      <div className="subheader">
-        <h2>Subheader</h2>
-      </div>      
+      </div>     
     </header>
     
   );

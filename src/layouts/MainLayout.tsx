@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Subheader from '../components/Subheader';
 import Footer from '../components/Footer';
 import '../styles/content.css';
 
@@ -13,6 +14,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     <div className="layout-container">
       {/* Header Component */}
       <Header />
+      {/* SubHeader Component */}
+      <Subheader />
 
       {/* Main Content */}
       <main className="content">

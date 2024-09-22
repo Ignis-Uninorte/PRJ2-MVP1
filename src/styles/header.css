@@ -87,3 +87,66 @@
   height: 40px;
   background-color: #ccc;
 }
+
+@media (max-width: 768px) {
+  /* Adjust header container */
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 15px;
+  }
+
+  /* Adjust logo */
+  .logo {
+      margin-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .logo img {
+      height: 80px;
+      max-width: 100%;
+      object-fit: contain;
+  }
+
+  /* Adjust search bar */
+  .search-bar {
+      width: 90%;
+      margin-top: 10px;
+  }
+
+  .search-bar input[type="text"] {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .search-button img {
+      width: 16px;
+      height: 16px;
+  }
+
+  
+  /* Account cart adjustments */
+  .account-cart {
+      margin-top: 20px;
+      padding-top: 20px;
+      justify-content: space-between; /* Distribute space evenly */
+      width: 50%;
+      align-items: center;
+      margin: 0 15px;	
+  }
+
+  .account-link, .cart-link {
+      display: flex;
+      flex-direction: row; /* Align icon and text horizontally */
+      align-items: center;
+  }
+
+  .account-link span, .cart-link span {
+      margin-left: 5px; /* Small gap between icon and text */
+      font-size: 12px;
+  }
+}
