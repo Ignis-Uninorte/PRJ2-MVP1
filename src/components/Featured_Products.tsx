@@ -12,6 +12,8 @@ import Samsung_Galaxy_S24_Ultra from '../assets/Samsung_Galaxy_S24_Ultra.jpg';
 import Xiaomi_Redmi_Note_12_Pro from '../assets/Xiaomi_Redmi_Note_12_Pro.jpg';
 import Motorola_Moto_G71 from '../assets/Motorola_Moto_G71.jpg';
 import '../styles/featuredProducts.css';
+import { Link } from 'react-router-dom';
+
 
 const products = [
   {
@@ -113,11 +115,14 @@ const products = [
 ];
 
 const FeaturedProducts: React.FC = () => {
+
   return (
     <section className="lp-section-2">
       {products.map((product) => (
         <div key={product.id} className="lp-product">
-          <img src={product.image} alt={product.name} />
+          <Link to={`/product/${product.id}`}>
+            <img src={product.image} alt={product.name} />
+          </Link>
           <h3>{product.name}</h3>
           <p className="lp-price">Price: ${product.price.toFixed(2)}</p>
           <p className="lp-discounted-price">

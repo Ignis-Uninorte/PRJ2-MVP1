@@ -67,6 +67,15 @@
     background-color: #7697a0;
 }
 
+.lp-product img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .lp-product img:hover {
+    transform: scale(1.05); /* Agranda un poco la imagen al pasar el mouse */
+  }
+
 /* General Responsive Styles */
 @media (max-width: 768px) {
 
