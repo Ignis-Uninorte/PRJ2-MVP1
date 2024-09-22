@@ -1,7 +1,10 @@
 import React from 'react';
+import { BrowserRouter} from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
+import FeaturedProducts from '../components/Featured_Products';
 import Banner from '../components/Banner';
 import PImg from '../components/PImg';
+
 
 const Home: React.FC = () => {
   return (
@@ -21,6 +24,9 @@ const Home: React.FC = () => {
         altText="Banner"
       />
       </div>
+      <BrowserRouter>
+        <FeaturedProducts />
+      </BrowserRouter> 
     </MainLayout>
   );
 };
