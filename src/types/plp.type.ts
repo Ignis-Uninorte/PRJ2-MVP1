@@ -6,7 +6,7 @@ export type ProductItem = {
     discount: number;
     image: string;
     rating: number;
-    especifications: {
+    specifications: {
         brand: string;
         condition: string;
         memoryStorage: string;
