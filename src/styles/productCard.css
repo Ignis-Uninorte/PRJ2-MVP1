@@ -9,6 +9,11 @@ a.product-card:hover{
     text-decoration:none;
 }
 
+a.product-card h3{
+    color: #173B61;
+    margin: 5px 0px;
+}
+
 a.product-card p{
     color: #000000;
     margin: 5px 0px;
@@ -54,4 +59,25 @@ a.product-card button:hover {
 
 a.product-card i.fa-solid.fa-cart-shopping {
     padding-right: 5px;
+}
+
+@media (max-width: 480px){
+    section.content-plp li.product {
+        background-color: #ffffff;
+        border: 2px solid #7697A0;
+        border-radius: 5px;
+        padding: 5px 20px;
+        margin: 10px;
+    }
+
+    a.product-card p.normal-price{
+        font-size: 0.9em;
+        color:brown;
+    }
+
+    a.product-card div.price-discount{
+        display: flex;
+        flex-direction: row;
+        font-size: 1em;
+    }
 }
