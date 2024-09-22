@@ -1,13 +1,12 @@
+// src/pages/Home.tsx
 import React from 'react';
-import MainLayout from '../layouts/MainLayout';
 
 const Home: React.FC = () => {
   return (
-    <MainLayout>
-      <div>
-        <p>Content section (Main)</p>
-      </div>
-    </MainLayout>
+    <div>
+      <h1>Welcome to Our Store</h1>
+      {/* Puedes agregar más contenido aquí */}
+    </div>
   );
 };
 
