@@ -1,0 +1,104 @@
+.lp-section-2 {
+    grid-column: 1/6;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(3, 1fr);  /* 3 rows with equal height */
+    gap: 20px; /* Space between products */
+    padding: 20px;
+    justify-items: center;
+    overflow: hidden; /* To avoid overflow */
+    border: 1px solid #173B61;
+}
+
+.lp-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing */
+    align-items: center;
+    height: 100%; /* Make product fill the grid cell */
+    max-height: 100%; /* Prevent overflow */
+    box-sizing: border-box;
+}
+
+.lp-product img {
+    height: auto;
+    max-height: 150px; /* Adjust image size */
+    object-fit: contain; /* Ensure image fits within the space */
+}
+
+.lp-product h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.lp-price {
+    margin: 5px 0;
+    font-size: 18px;
+    text-decoration: line-through;
+    color: #888;
+}
+
+.lp-discounted-price {
+    font-size: 18px;
+    color: #173B61;
+    margin: 5px 0;
+}
+
+.lp-discount {
+    font-size: 16px;
+    color: #e60000;
+}
+
+.lp-button {
+    width: 110px;
+    height: 45px;
+    background-color: #FD8916;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px;
+    position:relative
+}
+
+.lp-button:hover {
+    background-color: #7697a0;
+}
+
+.lp-product img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .lp-product img:hover {
+    transform: scale(1.05); /* Agranda un poco la imagen al pasar el mouse */
+  }
+
+/* General Responsive Styles */
+@media (max-width: 768px) {
+
+    .lp-section-2 {
+        grid-template-columns: repeat(1, 1fr); /* Adjust to 2 columns on smaller screens */
+        margin-right: 150px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .lp-section-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+        gap: 16px; /* Space between grid items */
+        width: 100%; /* Ensure the grid container takes up full width */
+        padding: 0 10px; /* Add padding to prevent content from touching screen edges */
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    }
+    
+    .lp-product {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}

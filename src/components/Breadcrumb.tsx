@@ -7,7 +7,7 @@ const Breadcrumb: React.FC = () => {
 
   return (
     <nav className="breadcrumb">
-      <Link to="/">Home</Link>
+      <Link to="/">HomePage</Link>
       {/* Conditionally render the category if available in location state */}
       {typeOfProduct && (
         <>
