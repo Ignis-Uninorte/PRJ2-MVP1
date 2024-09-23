@@ -4,6 +4,8 @@ import MainLayout from '../layouts/MainLayout';
 import bannerImg from '../assets/banner-plp.jpg';
 import { products } from '../utils/data';
 import { ProductCard } from '../components/ProductCard';
+import {filtersData} from '../utils/dataFilter';
+import Filter from "../components/Filter"
 
 
 const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
@@ -59,7 +61,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                     </div>
                 </section>
                 <aside className="filters-plp">
-                    <h2>Filters</h2>
+                    <Filter filtersData={filtersData} categoria={typeOfProduct} />;
                 </aside>
                 <section className="content-plp">
                     <ul>
