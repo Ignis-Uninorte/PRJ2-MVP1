@@ -4,6 +4,10 @@ import MainLayout from '../layouts/MainLayout';
 import FeaturedProducts from '../components/Featured_Products';
 import Banner from '../components/Banner';
 import PImg from '../components/PImg';
+import BI from '../assets/banner_img.gif';
+import PI1 from '../assets/Discounted_product1.jpg';
+import PI2 from '../assets/Discounted_product2.jpg';
+
 
 
 const Home: React.FC = () => {
@@ -11,18 +15,18 @@ const Home: React.FC = () => {
     <MainLayout>
       <div>
       <PImg 
-        imageUrl="src\assets\Discounted_product1.jpg" 
+        imageUrl={PI1}
         altText="Discount Image 1"
       />
       <PImg 
-        imageUrl="src\assets\Discounted_product2.jpg" 
+        imageUrl={PI2} 
         altText="Discount Image 2"
       />
       <BrowserRouter>
         <FeaturedProducts />
       </BrowserRouter> 
         <Banner 
-        imageUrl="src\assets\banner_img.gif" 
+        imageUrl={BI}
         altText="Banner"
       />
       </div>
