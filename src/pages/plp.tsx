@@ -25,7 +25,6 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                 sortedItems.sort((a, b) => Number((b.price - (b.price * b.discount / 100)).toFixed(2)) - Number((a.price - (a.price * a.discount / 100)).toFixed(2))); 
                 break;
             case 'date':
-                // Example: Sort by 'id' assumming as a proxy for newer items)
                 sortedItems.sort((a, b) => a.id - b.id);
                 break;
             default:
