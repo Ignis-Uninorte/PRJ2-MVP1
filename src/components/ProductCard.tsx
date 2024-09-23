@@ -37,8 +37,9 @@ const ProductCard: React.FC<ProductCardProps> = ({product}) =>{
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p className="short-description">{product.description}</p>
-            <div>
+            <div className="stars-section-plp">
                 {renderStars(product.rating)}
+                <p>{product.rating}</p>
             </div>
             <p className="normal-price"><s>${product.price}</s></p>
             <div className="price-discount">

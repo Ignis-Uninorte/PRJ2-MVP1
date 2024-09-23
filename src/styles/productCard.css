@@ -25,6 +25,13 @@ a.product-card img{
     margin: 0px;
 }
 
+a.product-card div.stars-section-plp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:#000000;
+}
+
 a.product-card p.normal-price{
     font-size: 1em;
     color:brown;
