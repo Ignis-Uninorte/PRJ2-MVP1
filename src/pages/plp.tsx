@@ -26,7 +26,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                 break;
             case 'date':
                 // Example: Sort by 'id' assumming as a proxy for newer items)
-                sortedItems.sort((a, b) => b.id - a.id);
+                sortedItems.sort((a, b) => a.id - b.id);
                 break;
             default:
                 break;
