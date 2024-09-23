@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import '../styles/subheader.css'; // Import your CSS file
 
 // Example array of categories and subcategories
@@ -6,37 +7,37 @@ const categories = [
   {
     name: 'Technology',
     subcategories: [
-      { name: 'Computers', url: '/plp-technology/computers' },
-      { name: 'Televisions', url: '/plp-technology/televisions' },
-      { name: 'Audio', url: '/plp-technology/audio' },
-      { name: 'Video', url: '/plp-technology/video' },
-      { name: 'Printing', url: '/plp-technology/printing' },
-      { name: 'Cameras', url: '/plp-technology/cameras' }
+      { name: 'Computers', type: 'Computers' }, // type is passed as a prop
+      { name: 'Televisions', type: 'Televisions' },
+      { name: 'Audio', type: 'Audio' },
+      { name: 'Video', type: 'Video' },
+      { name: 'Printing', type: 'Printing' },
+      { name: 'Cameras', type: 'Cameras' }
     ]
   },
   {
     name: 'Appliances',
     subcategories: [
-      { name: 'Air Conditioning', url: '/plp-appliances/air-conditioning' },
-      { name: 'Refrigeration', url: '/plp-appliances/refrigeration' },
-      { name: 'Washers/Dryers', url: '/plp-appliances/washers-dryers' }
+      { name: 'Air Conditioning', type: 'Air Conditioning' },
+      { name: 'Refrigeration', type: 'Refrigeration' },
+      { name: 'Washers/Dryers', type: 'Washers/Dryers' }
     ]
   },
   {
     name: 'Mobile Devices',
     subcategories: [
-      { name: 'Phones', url: '/plp-mobile-devices/phones' },
-      { name: 'Tablets', url: '/plp-mobile-devices/tablets' },
-      { name: 'Smartwatches', url: '/plp-mobile-devices/smartwatches' }
+      { name: 'Phones', type: 'Phones' },
+      { name: 'Tablets', type: 'Tablets' },
+      { name: 'Smartwatches', type: 'Smartwatches' }
     ]
   },
   {
     name: 'Home',
     subcategories: [
-      { name: 'Living Room', url: '/plp-home/living-room' },
-      { name: 'Dining Room', url: '/plp-home/dining-room' },
-      { name: 'Kitchen', url: '/plp-home/kitchen' },
-      { name: 'Bathroom', url: '/plp-home/bathroom' }
+      { name: 'Living Room', type: 'Living Room' },
+      { name: 'Dining Room', type: 'Dining Room' },
+      { name: 'Kitchen', type: 'Kitchen' },
+      { name: 'Bathroom', type: 'Bathroom' }
     ]
   }
 ];
@@ -64,7 +65,10 @@ const Subheader: React.FC = () => {
             <ul className={`submenu ${activeIndex === index ? 'open' : ''}`}>
               {category.subcategories.map((sub) => (
                 <li key={sub.name}>
-                  <a href={sub.url}>{sub.name}</a>
+                  {/* Use Link to navigate to the main PLP and pass the type via state */}
+                  <Link to="/plp" state={{ typeOfProduct: sub.type }}>
+                    {sub.name}
+                  </Link>
                 </li>
               ))}
             </ul>
