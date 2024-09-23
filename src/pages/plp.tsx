@@ -6,7 +6,7 @@ import { products } from '../utils/data';
 import { ProductCard } from '../components/ProductCard';
 import {filtersData} from '../utils/dataFilter';
 import Filter from "../components/Filter"
-
+import Breadcrumb from '../components/Breadcrumb';
 
 const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
     const [sortOption, setSortOption] = useState<string>('relevance'); // Add state for sorting
@@ -39,8 +39,9 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
     return (
         <MainLayout>
             <div className="grid-container-plp">
+
                 <nav className="breadcrumb-plp">
-                    <p>BREADCRUMB</p>
+                   <Breadcrumb/>
                 </nav>
                 <section className="information-above-plp">
                     <p>Showing {sortedItems.length} results</p>
