@@ -1061,13 +1061,13 @@ export const products = [
                 name: "Bathroom Rugs",
                 description: "Bathroom Rugs, Ultra Soft Chenille Plush Bath Mat, Super Absorbent, Non-Slip Machine Washable Bath Rug for Shower, Bathroom, Kitchen, Floors",
                 price: 209.99,
-                discount: 10,
-                image: "https://m.media-amazon.com/images/I/61Xl6g9VwYL._AC_SL1500_.jpg",
+                discount: 15,
+                image: "https://m.media-amazon.com/images/I/91RzUPx1mkL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
                 rating: 4.5,
                 specifications: {
                     brand: "Generic",
                     color: "Gray",
-                    type: "Bathroom Rugs",
+                    type: "Rugs",
                     dimensions: "20 x 32 inches"
                 }
             },
@@ -1075,27 +1075,27 @@ export const products = [
                 id: 2,
                 name: "Bathroom Shower Curtain",
                 description: "Shower Curtain with 12 Hooks, Waterproof Polyester Fabric Shower Curtain for Bathroom, Hotel Quality, Machine Washable, 72 x 72 inches",
-                price: 199.99,
-                discount: 5,
-                image: "https://m.media-amazon.com/images/I/71wJ0XqZ3PL._AC_SL1500_.jpg",
+                price: 30,
+                discount: 45,
+                image: "https://m.media-amazon.com/images/I/81nNdiTnDeL._AC_SL1500_.jpg",
                 rating: 4.5,
                 specifications: {
-                    brand: "Generic",
-                    color: "White",
+                    brand: "Easy-Going",
+                    color: "Cream",
                     type: "Shower Curtain",
                     dimensions: "72 x 72 inches"
                 }
             },
             {
                 id: 3,
-                name: "Bathroom Storage Cabinet",
+                name: "NOKAMW Storage Cabinet",
                 description: "Bathroom Storage Cabinet with 3 Tier Shelves and 2 Doors, Free Standing Floor Cabinet, Kitchen Cupboard, Wooden Entryway Storage Cabinet, 23.6 x 11.8 x 31.5 inches",
                 price: 215,
                 discount: 10,
-                image: "https://m.media-amazon.com/images/I/71LzV0Zn2tL._AC_SL1500_.jpg",
+                image: "https://m.media-amazon.com/images/I/71ECN79BNhL._AC_SL1500_.jpg",
                 rating: 4.5,
                 specifications: {
-                    brand: "Generic",
+                    brand: "NOKAMW",
                     color: "White",
                     type: "Storage Cabinet",
                     dimensions: "23.6 x 11.8 x 31.5 inches"
@@ -1103,36 +1103,196 @@ export const products = [
             },
             {
                 id: 4,
-                name: "Bathroom Towel Set",
-                description: "6 Piece Towel Set, 100% Cotton, Soft, Absorbent, Quick Dry, 2 Bath Towels, 2 Hand Towels, 2 Washcloths, Machine Washable, Hotel Quality, White",
-                price: 199.99,
+                name: "TEXTILOM Towel Set",
+                description: "6 Piece Towel Set, 100% Cotton, Soft, Absorbent, Quick Dry, 2 Bath Towels, 2 Hand Towels, 2 Washcloths, Machine Washable, Hotel Quality",
+                price: 159.99,
                 discount: 10,
-                image: "https://m.media-amazon.com/images/I/71J5J4kY5dL._AC_SL1500_.jpg",
+                image: "https://m.media-amazon.com/images/I/918n1ebARfL._AC_SL1500_.jpg",
                 rating: 4.5,
                 specifications: {
-                    brand: "Generic",
-                    color: "White",
+                    brand: "TEXTILOM",
+                    color: "Green",
                     type: "Towel Set",
                     dimensions: "6 Piece Set"
                 }
             },
             {
                 id: 5,
-                name: "Bathroom Accessories Set",
-                description: "4 Piece Bathroom Accessories Set, Includes Soap Dispenser, Tooth Brush Holder, Tumbler, Soap Dish, Durable Bath Accessory Set, Bathroom Decor, Gift Packaged, White",
-                price: 199.99,
+                name: "Clara Clark Accessories Set",
+                description: "Bathroom Accessories Set, Includes Soap Dispenser, Tooth Brush Holder, Tumbler, Soap Dish, Durable Bath Accessory Set, Bathroom Decor, Gift Packaged",
+                price: 89,
+                discount: 25,
+                image: "https://m.media-amazon.com/images/I/71Hs44dzO3L._AC_SL1500_.jpg",
+                rating: 4.5,
+                specifications: {
+                    brand: "Clara Clark",
+                    color: "White",
+                    type: "Accessories Set",
+                    dimensions: "8 Piece Set"
+                }
+            }
+        ]
+    },
+    {
+        id: 15,
+        category: "Kitchen",
+        items:[
+            {
+                id: 1,
+                name: "RAXCO Utensil Set",
+                description: "Silicone Cooking Utensils Set, Heat Resistant and Non-Stick Kitchen Utensil Set with Stainless Steel Handle, Kitchen Gadgets Tools Set for Cookware",
+                price: 209.99,
+                discount: 15,
+                image: "https://m.media-amazon.com/images/I/71YuEe-fqFL._AC_SL1500_.jpg",
+                rating: 4.5,
+                specifications: {
+                    brand: "RAXCO",
+                    color: "Black",
+                    type: "Utensil Set",
+                    dimensions: "10 Piece Set"
+                }
+            },
+            {
+                id: 2,
+                name: "RAXCO Knife Set",
+                description: "Knife Set with Block, 15 Pieces Kitchen Knife Set with Pine Block Holder, Knife Block Set with Sharpener, High Carbon Stainless Steel Knife Block Set, Boxed Knife Set",
+                price: 30,
+                discount: 45,
+                image: "https://m.media-amazon.com/images/I/710VumO24rL._AC_SL1500_.jpg",
+                rating: 4.9,
+                specifications: {
+                    brand: "RAXCO",
+                    color: "Black",
+                    type: "Knife Set",
+                    dimensions: "15 Piece Set"
+                }
+            },
+            {
+                id: 3,
+                name: "KitchenAid Stand Mixer",
+                description: "KitchenAid KSM75SL Classic Plus 4.5-Qt. Tilt-Head Stand Mixer",
+                price: 215,
                 discount: 10,
-                image: "https://m.media-amazon.com/images/I/71g3ZQKb-GL._AC_SL1500_.jpg",
+                image: "https://m.media-amazon.com/images/I/71-D8cOBrcL._AC_SL1500_.jpg",
+                rating: 3.5,
+                specifications: {
+                    brand: "KitchenAid",
+                    color: "Passion Red",
+                    type: "Stand Mixer",
+                    dimensions: '14.1"D x 8.7"W x 13.9"H'
+                }
+            },
+            {
+                id: 4,
+                name: "Cuisinart Toaster",
+                description: "Cuisinart CPT-180P1 Metal Classic 4-Slice toaster, Brushed Stainless",
+                price: 159.99,
+                discount: 10,
+                image: "https://m.media-amazon.com/images/I/619XRJY+bFL._AC_SL1173_.jpg",
+                rating: 4,
+                specifications: {
+                    brand: "Cuisinart",
+                    color: "Brushed Stainless",
+                    type: "Toaster",
+                    dimensions: "4-Slice"
+                }
+            },
+            {
+                id: 5,
+                name: "Instant Pot Duo",
+                description: "Instant Pot Duo 7-in-1 Electric Pressure Cooker, Slow Cooker, Rice Cooker, Steamer, Saute, Yogurt Maker, Sterilizer, and Warmer, 6 Quart, 14 One-Touch Programs",
+                price: 89,
+                discount: 25,
+                image: "https://m.media-amazon.com/images/I/71LmN7FsaZL._AC_SL1500_.jpg",
+                rating: 4.5,
+                specifications: {
+                    brand: "Instant Pot",
+                    color: "Stainless",
+                    type: "Pressure Cooker",
+                    dimensions: '11.2"D x 11.4"W x 10"H'
+                }
+            }
+        ]
+    },
+    {
+        id: 16,
+        category: "Video",
+        items: [
+            {
+                id: 1,
+                name: "YABER Projector",
+                description: "Projector with WiFi 6 and Bluetooth 5.2, YABER Pro V9 600 ANSI Native 1080P Outdoor Movie Projector, Auto 6D Keystone & 50% Zoom",
+                price: 499.99,
+                discount: 10,
+                image: "https://m.media-amazon.com/images/I/71EL5jIMgGL._AC_SL1500_.jpg",
+                rating: 4.5,
+                specifications: {
+                    brand: "YABER",
+                    color: "Black",
+                    type: "Projector",
+                    resolution: "1920 x 1080"
+                }
+            },
+            {
+                id: 2,
+                name: "Yilebe  Video Projector",
+                description: 'Portable Projector Supported 1080P Full HD & 170" Display Compatible with Phone,TV Stick',
+                price: 60.99,
+                discount: 15,
+                image: "https://m.media-amazon.com/images/I/610WCZ42iTL._AC_SL1500_.jpg",
+                rating: 4.5,
+                specifications: {
+                    brand: "Yeilebe",
+                    color: "White & Yellow",
+                    type: "Projector",
+                    resolution: "1920 x 1080"
+                }
+            },
+            {
+                id: 3,
+                name: "Digital Camera 5K",
+                description: '5K Digital Camera WiFi Autofocus Vlogging Camera for YouTube 48MP Camera for Photography and Video, 3.5" Screen Travel Camera with UV Filter, Anti-Shake,16X Digital Zoom,32GB SD Card,2 Batteries',
+                price: 160.99,
+                discount: 15,
+                image: "https://m.media-amazon.com/images/I/81A9tumA8ZL._AC_SL1500_.jpg",
                 rating: 4.5,
                 specifications: {
                     brand: "Generic",
+                    color: "Black",
+                    type: "Video Camera",
+                    resolution: "1920 x 1080"
+                }
+            },
+            {
+                id: 4,
+                name: "Video Camera",
+                description: 'Video Camera YouTube Vlogging Camera Recorder FHD 1080P 24.0MP 3.0 Inch 270 Degree Rotation Screen 16X Digital Zoom Camcorder with Microphone,Remote Control and 2 Batteries',
+                price: 90,
+                discount: 18,
+                image: "https://m.media-amazon.com/images/I/71XjuW0u+oL._AC_SL1500_.jpg",
+                rating: 4,
+                specifications: {
+                    brand: "Generic",
+                    color: "Black",
+                    type: "Video Camera",
+                    resolution: "1920 x 1080"
+                }
+            },
+            {
+                id: 5,
+                name: "TP-Link Tapo",
+                description: '1080P Indoor Security Camera for Baby Monitor, Dog Camera w/Motion Detection, 2-Way Audio Siren, Night Vision, Cloud & SD Card Storage, Works w/Alexa & Google Home',
+                price: 25,
+                discount: 40,
+                image: "https://m.media-amazon.com/images/I/61gJcez9unL._AC_SL1500_.jpg",
+                rating: 4,
+                specifications: {
+                    brand: "Generic",
                     color: "White",
-                    type: "Bathroom Accessories Set",
-                    dimensions: "4 Piece Set"
+                    type: "Spot Camera",
+                    resolution: "HD"
                 }
             }
         ]
     }
 ];
-
-// Video, Kitchen
