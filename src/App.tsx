@@ -1,39 +1,30 @@
-// src/App.tsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Breadcrumb from './components/Breadcrumb';
-import Subheader from './components/Subheader';
-import Home from './pages/Home';
-import PLP from './pages/PLP';
+import Home from './pages/home';
+import PLP from './pages/plp'; // Import the PLP component
+import { BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
+import ProductDetails from './components/pdp';
+
+// A wrapper to pass state from route into the PLP component
+const PlpWrapper: React.FC = () => {
+  const location = useLocation();
+  const typeOfProduct = location.state?.typeOfProduct; // Get typeOfProduct from state
+
+  return <PLP typeOfProduct={typeOfProduct} />; // Pass it as a prop
+};
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Subheader />
-      <Breadcrumb />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/technology" element={<PLP />} />
-        <Route path="/technology/computers" element={<PLP />} />
-        <Route path="/technology/televisions" element={<PLP />} />
-        <Route path="/technology/audio" element={<PLP />} />
-        <Route path="/technology/video" element={<PLP />} />
-        <Route path="/technology/printing" element={<PLP />} />
-        <Route path="/technology/cameras" element={<PLP />} />
-        <Route path="/appliances" element={<PLP />} />
-        <Route path="/appliances/air-conditioning" element={<PLP />} />
-        <Route path="/appliances/refrigeration" element={<PLP />} />
-        <Route path="/appliances/washers-dryers" element={<PLP />} />
-        <Route path="/mobile-devices" element={<PLP />} />
-        <Route path="/mobile-devices/phones" element={<PLP />} />
-        <Route path="/mobile-devices/tablets" element={<PLP />} />
-        <Route path="/mobile-devices/smartwatches" element={<PLP />} />
-        <Route path="/home/living-room" element={<PLP />} />
-        <Route path="/home/dining-room" element={<PLP />} />
-        <Route path="/home/kitchen" element={<PLP />} />
-        <Route path="/home/bathroom" element={<PLP />} />
-      </Routes>
+    
+    <Router basename='/PRJ2-MVP1/' >
+    
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/plp" element={<PlpWrapper />} />
+        </Routes>
     </Router>
+
+
   );
 };
 
