@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './pages/home';
 import PLP from './pages/plp'; // Import the PLP component
 import { BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
+import ProductDetails from './components/pdp';
 
 // A wrapper to pass state from route into the PLP component
 const PlpWrapper: React.FC = () => {
@@ -13,13 +14,18 @@ const PlpWrapper: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <Router basename="/PRJ2-MVP1/">  
-      <Routes>    
-        <Route path="/" element={<Home />} />
-        {/* Route for PLP with no dynamic URL but with typeOfProduct passed via state */}
-        <Route path="/plp" element={<PlpWrapper />} />
-      </Routes>
-    </Router>
+    <><div>
+      <Home />
+    </div>
+    <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/plp" element={<PlpWrapper />} />
+        </Routes>
+    </Router></>
+
+
   );
 };
 

@@ -5,13 +5,13 @@ import Footer from '../components/Footer';
 import '../styles/content.css';
 import { BrowserRouter } from 'react-router-dom';
 
-
 interface MainLayoutProps {
   children: React.ReactNode;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
+
     <div className="layout-container">
       {/* Header Component */}
       <BrowserRouter>
