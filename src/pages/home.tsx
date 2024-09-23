@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter} from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import FeaturedProducts from '../components/Featured_Products';
 import Banner from '../components/Banner';
@@ -22,9 +21,7 @@ const Home: React.FC = () => {
         imageUrl={PI2} 
         altText="Discount Image 2"
       />
-      <BrowserRouter>
         <FeaturedProducts />
-      </BrowserRouter> 
         <Banner 
         imageUrl={BI}
         altText="Banner"

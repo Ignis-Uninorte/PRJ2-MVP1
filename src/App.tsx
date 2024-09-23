@@ -14,16 +14,15 @@ const PlpWrapper: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <><div>
-      <Home />
-    </div>
-    <Router>
+    
+    <Router basename='/PRJ2-MVP1/' >
+    
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/plp" element={<PlpWrapper />} />
         </Routes>
-    </Router></>
+    </Router>
 
 
   );
