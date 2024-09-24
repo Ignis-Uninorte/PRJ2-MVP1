@@ -15,7 +15,7 @@ const PlpWrapper: React.FC = () => {
 const App: React.FC = () => {
   return (
     
-    <Router basename='/PRJ2-MVP1/' >
+    <Router>
     
         <Routes>
           <Route path="/" element={<Home />} />

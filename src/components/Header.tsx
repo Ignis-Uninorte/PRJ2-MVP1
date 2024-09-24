@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import the Link component from react-router-dom
 import '../styles/header.css';
-import CompanyLogo from '../assets/ignis_store_logo.png';
+import CompanyLogo from '../assets/Ignis_Store_Logo.png';
 import SearchIcon from '../assets/search_icon.svg';	
 import AccountIcon from '../assets/account-icon.svg';
 import CartIcon from '../assets/cart-icon.svg';
