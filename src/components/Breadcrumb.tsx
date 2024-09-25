@@ -9,14 +9,14 @@ interface BreadcrumbProps {
 }
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ category, productName, isShoppingCart }) => {
-  const { typeOfProduct } = useParams<{ typeOfProduct: string }>(); // Extract typeOfProduct from URL if available
-  const location = useLocation(); // Access current location for dynamic breadcrumb rendering
+  const { typeOfProduct } = useParams<{ typeOfProduct: string }>(); 
+  const location = useLocation(); 
 
   const renderShoppingCartBreadcrumb = () => (
     <>
       <Link to="/">Home</Link>
       <span className="breadcrumb-separator"> / </span>
-      <span>ShoppingCart</span> {/* No link for current page */}
+      <span>ShoppingCart</span> 
     </>
   );
 
@@ -48,23 +48,22 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ category, productName, isShoppi
       {productName && (
         <>
           <span className="breadcrumb-separator"> / </span>
-          <span>{productName}</span> {/* Current page */}
+          <span>{productName}</span> 
         </>
       )}
     </>
   );
 
-  // Determine the breadcrumb structure based on the current page
+  
   if (isShoppingCart) {
     return <nav className="breadcrumb">{renderShoppingCartBreadcrumb()}</nav>;
   }
 
   if (location.pathname.includes('/product/')) {
-    // PDP page
+    
     return <nav className="breadcrumb">{renderPDPBreadcrumb()}</nav>;
   }
 
-  // Default to PLP or home page (Home only or Home / Category)
   return <nav className="breadcrumb">{renderPLPBreadcrumb()}</nav>;
 };
 
