@@ -41,7 +41,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
             <div className="grid-container-plp">
 
                 <nav className="breadcrumb-plp">
-                   <Breadcrumb/>
+                <Breadcrumb category={typeOfProduct} /> 
                 </nav>
                 <section className="information-above-plp">
                     <p>Showing {sortedItems.length} results</p>

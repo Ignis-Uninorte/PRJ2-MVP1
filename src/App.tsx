@@ -1,15 +1,16 @@
 import React from 'react';
 import Home from './pages/home';
 import PLP from './pages/plp'; // Import the PLP component
-import { BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useParams} from 'react-router-dom';
 import ProductDetails from './components/pdp';
+import ShoppingCart from './components/ShoppingCart';
 
 // A wrapper to pass state from route into the PLP component
 const PlpWrapper: React.FC = () => {
-  const location = useLocation();
-  const typeOfProduct = location.state?.typeOfProduct; // Get typeOfProduct from state
+  const { typeOfProduct } = useParams<{ typeOfProduct: string }>();
 
-  return <PLP typeOfProduct={typeOfProduct} />; // Pass it as a prop
+  // Ensure typeOfProduct is always a string, fallback to an empty string if undefined
+  return <PLP typeOfProduct={typeOfProduct ?? ''} />;
 };
 
 const App: React.FC = () => {
@@ -20,7 +21,8 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/plp" element={<PlpWrapper />} />
+          <Route path="/plp/:typeOfProduct" element={<PlpWrapper />} />
+          <Route path="/shoppingcart" element={<ShoppingCart />} />
         </Routes>
     </Router>
 
