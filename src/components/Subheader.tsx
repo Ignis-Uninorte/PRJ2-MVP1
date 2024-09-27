@@ -66,7 +66,7 @@ const Subheader: React.FC = () => {
               {category.subcategories.map((sub) => (
                 <li key={sub.name}>
                   {/* Use Link to navigate to the main PLP and pass the type via state */}
-                  <Link to="/plp" state={{ typeOfProduct: sub.type }}>
+                  <Link to={`/plp/${sub.type}`}>
                     {sub.name}
                   </Link>
                 </li>
