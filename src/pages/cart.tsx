@@ -10,8 +10,7 @@ const Cart: React.FC = () => {
     return (
 
 
-    
-
+    <MainLayout>
 <div>
 <main className="main-sc">
           <h2>Products</h2>
@@ -43,6 +42,9 @@ const Cart: React.FC = () => {
       </div>
        
       
+    </MainLayout>
+
+
       
  
 
