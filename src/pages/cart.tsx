@@ -4,11 +4,16 @@ import "../styles/cart.css"
 import { cart } from '../utils/cartData';
 import ProductItem from '../components/ProductItem';
 import OrderSummary from '../components/OrderSummary';
-
+import MainLayout from '../layouts/MainLayout';
 
 const Cart: React.FC = () => {
     return (
-        <main className="main-sc">
+
+
+    
+
+<div>
+<main className="main-sc">
           <h2>Products</h2>
           <nav className="breadcrumb">
             Home &gt; Cellphones &gt; Tablets &gt; ShoppingCart
@@ -33,8 +38,23 @@ const Cart: React.FC = () => {
               vat={cart.vat}
               total={cart.total}
             />
-          </div>|
+          </div>
         </main>
+      </div>
+       
+      
+      
+ 
+
+
+
+
+      
+
+     
+
+
+        
       );
 };
 
