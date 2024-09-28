@@ -1,6 +1,14 @@
+// src/components/ProductItem.tsx
 import React from 'react';
 
-const ProductItem: React.FC =({ imgSrc, title, shippingName })  => {
+interface ProductItemProps {
+  imgSrc: string;
+  title: string;
+  shippingName: string;
+  quantity: number;
+}
+
+const ProductItem: React.FC<ProductItemProps> = ({ imgSrc, title, shippingName, quantity }) => {
   return (
     <div className="product-item-sc">
       <div className="title-img-product-sc">
@@ -15,7 +23,7 @@ const ProductItem: React.FC =({ imgSrc, title, shippingName })  => {
           <label><input type="radio" name={shippingName} value="pickup" /> In-store Pickup</label>
         </div>
         <label htmlFor={`quantity-${shippingName}`} style={{ fontWeight: 'bold' }}>Quantity:</label>
-        <select id={`quantity-${shippingName}`} name={`quantity-${shippingName}`}>
+        <select id={`quantity-${shippingName}`} name={`quantity-${shippingName}`} value={quantity}>
           {[...Array(10).keys()].map((i) => (
             <option value={i} key={i}>{i}</option>
           ))}
@@ -23,7 +31,6 @@ const ProductItem: React.FC =({ imgSrc, title, shippingName })  => {
       </div>
     </div>
   );
-}
-
+};
 
 export default ProductItem;

@@ -3,7 +3,7 @@ import React from 'react';
 import "../styles/cart.css"
 import { cart } from '../utils/cartData';
 import ProductItem from '../components/ProductItem';
-
+import OrderSummary from '../components/OrderSummary';
 
 
 const Cart: React.FC = () => {
@@ -26,6 +26,13 @@ const Cart: React.FC = () => {
              ))}
             </div>
             
+            <OrderSummary 
+              subtotal={cart.subtotal}
+              shippingCost={cart.shippingCost}
+              discounts={cart.discounts}
+              vat={cart.vat}
+              total={cart.total}
+            />
           </div>|
         </main>
       );

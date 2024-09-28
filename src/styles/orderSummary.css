@@ -1,0 +1,38 @@
+.order-summary {
+    flex: 1;
+    background-color: #C5E0E8;
+    padding: 20px;
+    border-radius: 0.3rem;
+    height: fit-content;
+}
+.order-summary h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.order-summary ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+.order-summary ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.order-summary ul li span {
+    float: right;
+}
+
+.order-summary button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FD8916;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+.order-summary button:hover {
+    background-color: #305d69;
+}
