@@ -1,7 +1,11 @@
 export type ProductItem = {
     id: number;
     name: string;
-    description: string;
+    shortDescription: string;
+    description: 
+        { title: string;
+            content: string;
+        }[];
     price: number;
     discount: number;
     image: string;
