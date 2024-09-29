@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './pages/home';
 import PLP from './pages/plp'; // Import the PLP component
 import { BrowserRouter as Router, Route, Routes, useParams} from 'react-router-dom';
-import ProductDetails from './components/pdp';
+import ProductDetails from './pages/pdp';
 import ShoppingCart from './components/ShoppingCart';
 
 // A wrapper to pass state from route into the PLP component
