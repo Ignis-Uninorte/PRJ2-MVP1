@@ -1,5 +1,4 @@
-// src/components/ProductItem.tsx
-import React from 'react';
+import React, { useState } from 'react';
 
 interface ProductItemProps {
   imgSrc: string;
@@ -9,6 +8,12 @@ interface ProductItemProps {
 }
 
 const ProductItem: React.FC<ProductItemProps> = ({ imgSrc, title, shippingName, quantity }) => {
+  const [selectedQuantity, setSelectedQuantity] = useState<number>(quantity);
+
+  const handleQuantityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedQuantity(Number(e.target.value));
+  };
+
   return (
     <div className="product-item-sc">
       <div className="title-img-product-sc">
@@ -18,12 +23,23 @@ const ProductItem: React.FC<ProductItemProps> = ({ imgSrc, title, shippingName, 
         <div className="shipping-method">
           <h3>{title}</h3>
           <h4>Shipping method</h4>
-          <label><input type="radio" name={shippingName} value="standard" defaultChecked /> Standard</label>
-          <label><input type="radio" name={shippingName} value="express" /> Express</label>
-          <label><input type="radio" name={shippingName} value="pickup" /> In-store Pickup</label>
+          <label>
+            <input type="radio" name={shippingName} value="standard" defaultChecked /> Standard
+          </label>
+          <label>
+            <input type="radio" name={shippingName} value="express" /> Express
+          </label>
+          <label>
+            <input type="radio" name={shippingName} value="pickup" /> In-store Pickup
+          </label>
         </div>
         <label htmlFor={`quantity-${shippingName}`} style={{ fontWeight: 'bold' }}>Quantity:</label>
-        <select id={`quantity-${shippingName}`} name={`quantity-${shippingName}`} value={quantity}>
+        <select
+          id={`quantity-${shippingName}`}  
+          name={`quantity-${shippingName}`}  
+          value={selectedQuantity}
+          onChange={handleQuantityChange}
+        >
           {[...Array(10).keys()].map((i) => (
             <option value={i} key={i}>{i}</option>
           ))}

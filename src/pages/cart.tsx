@@ -1,5 +1,5 @@
-// src/pages/Home.tsx
-import React from 'react';
+
+import React from 'react'
 import "../styles/cart.css"
 import { cart } from '../utils/cartData';
 import ProductItem from '../components/ProductItem';
@@ -8,10 +8,8 @@ import MainLayout from '../layouts/MainLayout';
 
 const Cart: React.FC = () => {
     return (
+ <MainLayout> 
 
-
-    <MainLayout>
-<div>
 <main className="main-sc">
           <h2>Products</h2>
           <nav className="breadcrumb">
@@ -39,24 +37,17 @@ const Cart: React.FC = () => {
             />
           </div>
         </main>
-      </div>
-       
       
-    </MainLayout>
 
+ </MainLayout>
 
-      
  
 
-
-
-
+       
       
+    
 
-     
-
-
-        
+  
       );
 };
 
