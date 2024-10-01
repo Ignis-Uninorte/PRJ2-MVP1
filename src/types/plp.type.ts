@@ -4,7 +4,7 @@ export type ProductItem = {
     shortDescription: string;
     description: 
         { title: string;
-            content: string;
+            description: string;
         }[];
     price: number;
     discount: number;
@@ -15,15 +15,11 @@ export type ProductItem = {
     };
 }
 
-export type ProductList = {
+export type ProductsList = {
+    id: number;
     category: string;
     products: ProductItem[];
 }[]
 
-export type Product = {
-    id: number;
-    category: string;
-    items: ProductItem[];
-}
 
 
