@@ -1,6 +1,6 @@
 import apiManager from './api';
 
-export function getFeaturedProducts() {
+export function getPromotionalImages() {
   return apiManager.get('/featured')
     .then(response => response.data)
     .catch(error => {
