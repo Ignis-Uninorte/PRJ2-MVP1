@@ -1,0 +1,24 @@
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8d7da;
+  }
+  
+  .error-message {
+    text-align: center;
+    color: #721c24;
+    padding: 20px;
+    border: 1px solid #f5c6cb;
+    background-color: #f8d7da;
+  }
+  
+  .error-message h1 {
+    font-size: 24px;
+  }
+  
+  .error-message p {
+    font-size: 18px;
+  }
+  

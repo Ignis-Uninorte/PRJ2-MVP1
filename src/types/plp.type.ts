@@ -1,7 +1,11 @@
 export type ProductItem = {
     id: number;
     name: string;
-    description: string;
+    shortDescription: string;
+    description: 
+        { title: string;
+            description: string;
+        }[];
     price: number;
     discount: number;
     image: string;
@@ -11,15 +15,14 @@ export type ProductItem = {
     };
 }
 
-export type ProductList = {
+export type ProductsList = {
+    id: number;
+    category: string;
+    products: ProductItem[];
+}
+
+export type ListOfProductsList = {
+    id: number;
     category: string;
     products: ProductItem[];
 }[]
-
-export type Product = {
-    id: number;
-    category: string;
-    items: ProductItem[];
-}
-
-

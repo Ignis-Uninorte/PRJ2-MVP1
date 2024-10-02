@@ -730,7 +730,7 @@ export const products = [
     },
     {
         id: 10,
-        category: "Washers/Dryers",
+        category: "Washers-Dryers",
         items: [
             {
                 id: 1,
