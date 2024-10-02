@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
+import ProductDetail from '../components/ProductDetail';
 
 const Pdp: React.FC = () => {
-  const { id } = useParams<{ id: string }>(); // Obtiene el ID del producto desde la URL
-
+    const { category, idProduct } = useParams<{ category: string, idProduct: string}>(); //Obtiene los parámetros de la URL
     return (
         <MainLayout>
-        <h1>Product Detail for Product ID: {id}</h1>
-        {/* Aquí agregarás el contenido del producto más adelante */}
+        <div>
+          <ProductDetail idProduct={Number(idProduct)} category={category || "Tablets"}/>
+        </div>
         </MainLayout>
     );
 };

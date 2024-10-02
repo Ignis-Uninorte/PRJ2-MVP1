@@ -19,7 +19,10 @@ export type ProductsList = {
     id: number;
     category: string;
     products: ProductItem[];
+}
+
+export type ListOfProductsList = {
+    id: number;
+    category: string;
+    products: ProductItem[];
 }[]
-
-
-
