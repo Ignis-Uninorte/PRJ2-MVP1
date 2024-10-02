@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Route, Routes, useParams} from 'react-router-d
 import ProductDetails from './components/pdp';
 import ShoppingCart from './components/ShoppingCart';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // A wrapper to pass state from route into the PLP component
+
 const queryClient = new QueryClient();
 
 const PlpWrapper: React.FC = () => {
@@ -18,7 +20,6 @@ const PlpWrapper: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    
    <QueryClientProvider client={queryClient}>
     <Router>
     
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <Route path="/shoppingcart" element={<ShoppingCart />} />
         </Routes>
     </Router>
+   </QueryClientProvider>
    </QueryClientProvider>
 
   );
