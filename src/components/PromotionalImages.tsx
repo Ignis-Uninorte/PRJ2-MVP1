@@ -12,7 +12,7 @@ const PromotionalImages: React.FC = () => {
   }
 
   if (isError) {
-    return <ErrorComponent message={'Error loading images.'} />; // Show error component if fetching failed
+    return <ErrorComponent message={''} />; // Show error component if fetching failed
   }
 
   return (
