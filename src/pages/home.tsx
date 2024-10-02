@@ -2,7 +2,7 @@
 import React from 'react';
 import MainLayout from '../layouts/MainLayout';
 import FeaturedProducts from '../components/Featured_Products';
-import Banner from '../components/Banner';
+import LowerBanner from '../components/LowerBanner';
 import PImg from '../components/PImg';
 import BI from '../assets/banner_img.gif';
 import PI1 from '../assets/Discounted_product1.jpg';
@@ -26,9 +26,9 @@ const Home: React.FC = () => {
         altText="Discount Image 2"
       />
         <FeaturedProducts />
-        <Banner 
+        <LowerBanner 
         imageUrl={BI}
-        altText="Banner"
+        altText="LowerBanner"
       />
       </div>
     </MainLayout>
