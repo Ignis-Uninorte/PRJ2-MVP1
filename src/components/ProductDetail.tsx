@@ -1,7 +1,7 @@
 import {useGetProducts} from '../hooks/useGetProduct'
 
 interface ProductDetailProps {
-    idProduct: number,
+    idProduct: string,
     category: string
 }
 
@@ -17,7 +17,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({idProduct, category})  => 
                 <p>Insertar Error</p>
             )}
             {!isLoading && !isError && isSuccess && products && (
-                <div>
+                <div className="product-layout">
+                    { productCategory = products.find(product => product.category === category);}
                     <p>{idProduct}</p>
                     <p>{category}</p>
                     <p>Aca va la info del producto</p>

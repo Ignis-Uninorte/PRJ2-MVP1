@@ -8,7 +8,7 @@ const Pdp: React.FC = () => {
     return (
         <MainLayout>
         <div>
-          <ProductDetail idProduct={Number(idProduct)} category={category || "Tablets"}/>
+          <ProductDetail idProduct={idProduct || "-1"} category={category || "Tablets"}/>
         </div>
         </MainLayout>
     );

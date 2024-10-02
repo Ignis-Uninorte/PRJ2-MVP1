@@ -109,7 +109,13 @@ const FeaturedProducts: React.FC = () => {
     <section className="lp-section-2">
       {products.map((product) => (
         <div key={product.id} className="lp-product">
-          <Link to={`/product/${product.id}`}>
+          {/* 
+            <Link to={`/product/${product.id}`}>
+              <img src={importImage(product.image)} alt={product.name} />
+            </Link>
+          */}
+          {/* Link temporal para probar pdp*/}
+          <Link to={`/product/Tablets/2`}>
             <img src={importImage(product.image)} alt={product.name} />
           </Link>
           <h3>{product.name}</h3>
