@@ -81,3 +81,25 @@ body.body-SC{
     width: 100px;
     margin: 9px 3px 1px 3px;
 }
+
+@media (max-width: 1105px) {
+    .container-sc {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-item-sc{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .product-list-sc{
+        margin: 20px;
+    }
+    .product-image-sc {
+        width: 320px;
+        height: 190px;  
+    }
+    
+}

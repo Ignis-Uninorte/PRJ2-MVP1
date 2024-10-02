@@ -1,19 +1,19 @@
-
 import React from 'react'
 import "../styles/cart.css"
 import { cart } from '../utils/cartData';
 import ProductItem from '../components/ProductItem';
 import OrderSummary from '../components/OrderSummary';
 import MainLayout from '../layouts/MainLayout';
+import Breadcrumb from '../components/Breadcrumb';
 
-const Cart: React.FC = () => {
+const ShoppingCart: React.FC = () => {
     return (
  <MainLayout> 
 
 <main className="main-sc">
           <h2>Products</h2>
           <nav className="breadcrumb">
-            Home &gt; Cellphones &gt; Tablets &gt; ShoppingCart
+          <Breadcrumb isShoppingCart={true} /> {/* Home / ShoppingCart */}
           </nav>
           <div className="container-sc">
             <div className="product-list-sc">
@@ -38,16 +38,7 @@ const Cart: React.FC = () => {
           </div>
         </main>
       
-
- </MainLayout>
-
- 
-
-       
-      
-    
-
-  
+</MainLayout>
       );
 };
 
@@ -55,5 +46,7 @@ const Cart: React.FC = () => {
 
 
 
+export default ShoppingCart;
 
-export default Cart;
+
+

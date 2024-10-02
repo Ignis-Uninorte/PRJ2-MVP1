@@ -33,10 +33,12 @@ const Header: React.FC = () => {
             <span>My Account</span>
           </a>
           <div className="divider"></div>
-          <a className="cart-link" href="">
-            <img src={CartIcon} alt="Cart" />
+          <Link to ="/shoppingcart">
+          <img src={CartIcon} alt="Cart" />
             <span>My Cart</span>
-          </a>
+          </Link>
+            
+          
         </div>
       </div>     
     </header>
