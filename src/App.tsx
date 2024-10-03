@@ -7,7 +7,6 @@ import ShoppingCart from './components/ShoppingCart';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // A wrapper to pass state from route into the PLP component
-
 const queryClient = new QueryClient();
 
 const PlpWrapper: React.FC = () => {
@@ -19,6 +18,7 @@ const PlpWrapper: React.FC = () => {
 
 const App: React.FC = () => {
   return (
+
    <QueryClientProvider client={queryClient}>
     <Router>
     
