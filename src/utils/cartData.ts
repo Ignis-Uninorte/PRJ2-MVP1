@@ -13,21 +13,21 @@ export const cart = {
     total: 4174.00,
     products: [
       {
-        id: 1,
+        id: 2,
         imgSrc: SC1,
         title: "SAMSUNG Galaxy Tab A9+ Plus",
         shippingName: "shipping1",
         quantity: 1,
       },
       {
-        id: 2,
+        id: 1,
         imgSrc: SC2,
         title: "Samsung Galaxy Tab S9 FE+ Plus",
         shippingName: "shipping2",
         quantity: 1,
       },
       {
-        id: 3,
+        id: 5,
         imgSrc: SC3,
         title: "Lenovo Tab M9",
         shippingName: "shipping3",
