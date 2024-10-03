@@ -18,7 +18,7 @@ const categories = [
   {
     name: 'Appliances',
     subcategories: [
-      { name: 'Air Conditioning', type: 'Air Conditioning' },
+      { name: 'Air-Conditioning', type: 'Air-Conditioning' },
       { name: 'Refrigeration', type: 'Refrigerators' },
       { name: 'Washers-Dryers', type: 'Washers-Dryers' }
     ]

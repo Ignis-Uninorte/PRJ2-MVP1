@@ -8,10 +8,16 @@
     margin: 20px;
 }
 
-.img-product {
+.image-container-pd{
     grid-column: 1;
+    align-self: center;
+}
+
+.img-product {
+    justify-self: center;
     width: 80%;
     height: auto;
+    max-height: 80%;
     border-radius: 8px;
     object-fit: cover;
 }

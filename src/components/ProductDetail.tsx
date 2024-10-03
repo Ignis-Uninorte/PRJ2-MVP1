@@ -27,7 +27,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({idProduct, category})  => 
             )}
             {!isLoading && !isError && isSuccess && products && (
                 <div className="product-layout">
-                    <img src={product?.image} alt="Product Image" className="img-product"/>
+                    <div className="image-container-pd">
+                        <img src={product?.image} alt="Product Image" className="img-product"/>
+                    </div>
                     <section className="product-info">
                         <section className="product-details">
                             <h1>{product?.name}</h1>
