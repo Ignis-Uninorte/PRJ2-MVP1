@@ -20,7 +20,7 @@ const categories = [
     subcategories: [
       { name: 'Air Conditioning', type: 'Air Conditioning' },
       { name: 'Refrigeration', type: 'Refrigerators' },
-      { name: 'Washers/Dryers', type: 'Washers/Dryers' }
+      { name: 'Washers-Dryers', type: 'Washers-Dryers' }
     ]
   },
   {
@@ -66,7 +66,7 @@ const Subheader: React.FC = () => {
               {category.subcategories.map((sub) => (
                 <li key={sub.name}>
                   {/* Use Link to navigate to the main PLP and pass the type via state */}
-                  <Link to="/plp" state={{ typeOfProduct: sub.type }}>
+                  <Link to={`/plp/${sub.type}`}>
                     {sub.name}
                   </Link>
                 </li>

@@ -2,20 +2,36 @@ import React, { useState } from 'react';
 import "../styles/plp.css";
 import MainLayout from '../layouts/MainLayout';
 import bannerImg from '../assets/banner-plp.jpg';
-import { products } from '../utils/data';
 import { ProductCard } from '../components/ProductCard';
-import {filtersData} from '../utils/dataFilter';
-import Filter from "../components/Filter"
+import { filtersData } from '../utils/dataFilter';
+import Filter from "../components/Filter";
 import Breadcrumb from '../components/Breadcrumb';
+import { useAllProducts } from '../hooks/useProducts'; // Import the hook
+import Spinner from '../components/Spinner'; // Import spinner component for loading state
+import ErrorComponent from '../components/Error'; // Import error component for error state
 
 const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
     const [sortOption, setSortOption] = useState<string>('relevance'); // Add state for sorting
-    const productCategory = products.find(product => product.category === typeOfProduct);
+    const { data: products, isLoading, isError } = useAllProducts(); // Use the hook to fetch data
 
+    // Handle loading state
+    if (isLoading) {
+        return <Spinner />;
+    }
+
+    // Handle error state
+    if (isError) {
+        return <ErrorComponent message="Failed to load products" />;
+    }
+
+
+
+    // Filter products based on category
+    const productCategory = products?.find((product: { category: string }) => product.category === typeOfProduct);
     // Function to sort products based on selected option
     const sortProducts = () => {
         if (!productCategory) return [];
-        const sortedItems = [...productCategory.items];
+        const sortedItems = [...productCategory.products];
         switch (sortOption) {
             case 'relevance':
                 sortedItems.sort((a, b) => b.rating - a.rating);
@@ -24,7 +40,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                 sortedItems.sort((a, b) => Number((a.price - (a.price * a.discount / 100)).toFixed(2)) - Number((b.price - (b.price * b.discount / 100)).toFixed(2)));
                 break;
             case 'priceh-l':
-                sortedItems.sort((a, b) => Number((b.price - (b.price * b.discount / 100)).toFixed(2)) - Number((a.price - (a.price * a.discount / 100)).toFixed(2))); 
+                sortedItems.sort((a, b) => Number((b.price - (b.price * b.discount / 100)).toFixed(2)) - Number((a.price - (a.price * a.discount / 100)).toFixed(2)));
                 break;
             case 'date':
                 sortedItems.sort((a, b) => a.id - b.id);
@@ -39,9 +55,8 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
     return (
         <MainLayout>
             <div className="grid-container-plp">
-
                 <nav className="breadcrumb-plp">
-                   <Breadcrumb/>
+                    <Breadcrumb category={typeOfProduct} />
                 </nav>
                 <section className="information-above-plp">
                     <p>Showing {sortedItems.length} results</p>
@@ -62,11 +77,11 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                     </div>
                 </section>
                 <aside className="filters-plp">
-                    <Filter filtersData={filtersData} categoria={typeOfProduct} />;
+                    <Filter filtersData={filtersData} categoria={typeOfProduct} />
                 </aside>
                 <section className="content-plp">
                     <ul>
-                        {sortedItems.map(item => (
+                        {sortedItems.map((item) => (
                             <li className="product" key={item.id}>
                                 <ProductCard product={item} />
                             </li>
@@ -82,3 +97,4 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
 };
 
 export default Plp;
+
