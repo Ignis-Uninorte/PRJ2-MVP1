@@ -18,7 +18,7 @@ const PlpWrapper: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    
+
    <QueryClientProvider client={queryClient}>
     <Router>
     

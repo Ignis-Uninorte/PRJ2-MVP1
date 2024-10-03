@@ -18,6 +18,7 @@ const FeaturedProducts: React.FC = () => {
 
   return (
     <section className="lp-section-2">
+
       {products.map((product: { id: number, category: string, idProduct: number, name: string, image: string, price: number, discount: number }) => {
         // Calculate the discounted price
         const discountedPrice = product.price ? product.price * (1 - product.discount / 100) : 0; //calculates the discounted price
