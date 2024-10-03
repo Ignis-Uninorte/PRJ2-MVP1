@@ -353,7 +353,7 @@ export const filtersData = {
           ],
         },
       ],
-      "Washers/Dryers": [
+      "Washers-Dryers": [
         {
           title: "Brand",
           options: [
