@@ -18,13 +18,14 @@ const FeaturedProducts: React.FC = () => {
 
   return (
     <section className="lp-section-2">
-      {products.map((product: { id: number, name: string, image: string, price: number, discount: number }) => {
+
+      {products.map((product: { id: number, category: string, idProduct: number, name: string, image: string, price: number, discount: number }) => {
         // Calculate the discounted price
         const discountedPrice = product.price ? product.price * (1 - product.discount / 100) : 0; //calculates the discounted price
 
         return (
           <div key={product.id} className="lp-product">
-            <Link to={`/product/${product.id}`}>
+            <Link to={`/product/${product.category}/${product.idProduct}`}>
               {/* Usamos directamente la URL de la imagen proporcionada por la API */}
               <img src={product.image} alt={product.name} />
             </Link>
