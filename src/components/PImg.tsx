@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/pimg.css';
 
 interface PImgProps {
+  key: number;
   imageUrl: string;
   altText: string;
 }

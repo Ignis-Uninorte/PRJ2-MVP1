@@ -8,5 +8,5 @@ const LoadingSpinner: React.FC = () => {
     </div>
   );
 };
-
 export default LoadingSpinner;
+
