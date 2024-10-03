@@ -28,12 +28,13 @@ const renderStars = (rating: number) => {
 
 interface ProductCardProps {
     product: ProductItem;
+    category: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product , category }) => {
     const priceDiscount = getDiscountPrice(product.price, product.discount);
     return (
-        <Link to={`/product/${product.id}`} className="product-card"> {/* Mueve el Link para envolver el div */}
+        <Link to={`/product/${category}/${product.id}`} className="product-card"> {/* Mueve el Link para envolver el div */}
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p className="short-description">{product.shortDescription}</p>

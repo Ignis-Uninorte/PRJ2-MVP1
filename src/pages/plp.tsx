@@ -83,7 +83,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                     <ul>
                         {sortedItems.map((item) => (
                             <li className="product" key={item.id}>
-                                <ProductCard product={item} />
+                                <ProductCard product={item} category={typeOfProduct}/>
                             </li>
                         ))}
                     </ul>
