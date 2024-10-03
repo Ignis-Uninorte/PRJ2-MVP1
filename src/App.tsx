@@ -4,8 +4,11 @@ import PLP from './pages/plp'; // Import the PLP component
 import { BrowserRouter as Router, Route, Routes, useParams} from 'react-router-dom';
 import ProductDetails from './components/pdp';
 import ShoppingCart from './pages/ShoppingCart';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 // A wrapper to pass state from route into the PLP component
+const queryClient = new QueryClient();
+
 const PlpWrapper: React.FC = () => {
   const { typeOfProduct } = useParams<{ typeOfProduct: string }>();
 
@@ -15,7 +18,8 @@ const PlpWrapper: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    
+
+   <QueryClientProvider client={queryClient}>
     <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,6 +28,8 @@ const App: React.FC = () => {
           <Route path="/shoppingcart" element={<ShoppingCart />} />
         </Routes>
     </Router>
+   </QueryClientProvider>
+
   );
 };
 export default App;
