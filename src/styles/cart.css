@@ -1,0 +1,105 @@
+nav.breadcrumb {
+    color: #173B61;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+nav.breadcrumb a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+
+/* STYLES FOT SHOPPING CART */
+
+body.body-SC{
+    margin:0;
+    padding: 0;
+}
+
+.main-sc {
+    font-family: 'Montserrat', sans-serif; /* Aplica Montserrat a todo */
+    color:  #173B61;
+    padding: 20px;
+    background-color: white ;
+    box-sizing: border-box;
+}
+.main-sc h2{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.container-sc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.product-list-sc {
+    flex: 2;
+}
+.product-item-sc {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 19px;
+    justify-content: center;
+    align-items: center;
+}
+.product-item-sc:last-child {
+    border-bottom: none;
+}
+.product-image-sc {
+    width: 370px;
+    height: 250px;
+    padding: 20px;
+}
+.product-details-sc {
+    flex: 1;
+}
+.product-details-sc h3 {
+    margin-bottom: 10px;
+}
+.shipping-method {
+    margin-bottom: 10px;
+}
+.shipping-method h4 {
+    margin-bottom: 10px;
+}
+.shipping-method label {
+    display: block;
+    margin-bottom: 5px;
+    gap: 10px;
+}
+.product-details-sc label {
+    display: block;
+
+}
+.product-details-sc select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    width: 100px;
+    margin: 9px 3px 1px 3px;
+}
+
+@media (max-width: 1105px) {
+    .container-sc {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-item-sc{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .product-list-sc{
+        margin: 20px;
+    }
+    .product-image-sc {
+        width: 320px;
+        height: 190px;  
+    }
+    
+}
