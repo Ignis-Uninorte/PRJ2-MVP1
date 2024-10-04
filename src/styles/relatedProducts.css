@@ -1,0 +1,31 @@
+
+.related-products {
+    margin-top: 2rem;
+  }
+  
+  .related-products h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .related-products-list {
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product-card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
