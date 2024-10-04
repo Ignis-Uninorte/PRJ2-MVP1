@@ -49,7 +49,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                         <form>
                             <select
                                 title = "Sort by"
-                                id="orderby-box"
+                                id="orderby-box"    
                                 value={sortOption}
                                 onChange={(e) => setSortOption(e.target.value)} // Handle sorting option change
                             >
