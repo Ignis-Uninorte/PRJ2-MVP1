@@ -100,15 +100,8 @@ div.banner-plp{
     width: 100%;
     height: auto;
     margin: 0;
-    background-color: black;
-}
-
-div.banner-plp img{
-    display:block;
-    width: 80%;
-    height: auto;
-    margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 @media (max-width: 480px){

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import "../styles/plp.css";
 import MainLayout from '../layouts/MainLayout';
-import bannerImg from '../assets/banner-plp.jpg';
+import BI from '../assets/banner-plp.jpg';
+import Banner from '../components/Banner';
 import { ProductCard } from '../components/ProductCard';
 import { filtersData } from '../utils/dataFilter';
 import Filter from "../components/Filter";
@@ -64,6 +65,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                         <h4>Order By</h4>
                         <form>
                             <select
+                                title ="Sort by"
                                 id="orderby-box"
                                 value={sortOption}
                                 onChange={(e) => setSortOption(e.target.value)} // Handle sorting option change
@@ -89,7 +91,10 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                     </ul>
                 </section>
                 <div className="banner-plp">
-                    <img src={bannerImg} alt="Banner" />
+                    <Banner 
+                        imageUrl={BI}
+                        altText="Banner"
+                    />
                 </div>
             </div>
         </MainLayout>
