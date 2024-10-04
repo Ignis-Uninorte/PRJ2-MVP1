@@ -1,6 +1,9 @@
 import {useGetProducts} from '../hooks/useGetProduct';
 import '../styles/productDetail.css';
 import {ProductItem} from '../types/plp.type' 
+import LoadingSpinner from '../components/Spinner';
+import ErrorComponent from '../components/Error';
+import Breadcrumb from '../components/Breadcrumb';
 
 interface ProductDetailProps {
     idProduct: string,
@@ -20,13 +23,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({idProduct, category})  => 
     return (
         <div>
             {isLoading && (
-                <p>Insertar Spinner</p>
+                <LoadingSpinner />
             )}
             {isError && (
-                <p>Insertar Error</p>
+                <ErrorComponent message="We couldn't find what you were looking for :("/>
             )}
             {!isLoading && !isError && isSuccess && products && (
                 <div className="product-layout">
+                    <Breadcrumb category={category} productName={product?.name} />
                     <div className="image-container-pd">
                         <img src={product?.image} alt="Product Image" className="img-product"/>
                     </div>
@@ -42,9 +46,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({idProduct, category})  => 
                             </div>
                             <ul>
                                 {product?.description.map(
-                                    desc => <li><strong>{desc.title} </strong>{desc.description}</li>
+                                    desc => <li key={desc.title}><strong>{desc.title} </strong>{desc.description}</li>
                                 )}
                             </ul>
+                            <button type="button">
+                                <i className="fa-solid fa-cart-shopping"></i>Add to cart
+                            </button>
                         </section>
                     </section>
                 </div>

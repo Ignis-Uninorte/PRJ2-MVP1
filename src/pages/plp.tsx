@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import "../styles/plp.css";
 import MainLayout from '../layouts/MainLayout';
-import bannerImg from '../assets/banner-plp.jpg';
+import BI from '../assets/banner-plp.jpg';
+import Banner from '../components/Banner';
 import { ProductCard } from '../components/ProductCard';
 import Filter from "../components/Filter";
 import Breadcrumb from '../components/Breadcrumb';
@@ -89,7 +90,10 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                         </ul>
                     </section>
                 <div className="banner-plp">
-                    <img src={bannerImg} alt="Banner" />
+                    <Banner 
+                        imageUrl={BI}
+                        altText="Banner"
+                    />
                 </div>
             </div>
         </MainLayout>

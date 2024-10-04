@@ -1,0 +1,56 @@
+/* Estilos principales */
+div.productSpecification-layout {
+    color: black;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+div.productSpecification-layout h2 {
+    margin: 0;
+    padding: 2%;
+}
+
+div.productSpecification-layout table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+div.productSpecification-layout table td {
+    padding: 8px;
+    border-bottom: 2px solid #151360;
+}
+
+@media (max-width: 768px) {
+    div.productSpecification-layout {
+        margin: 10px;
+        padding: 15px; 
+    }
+
+    div.productSpecification-layout h2 {
+        font-size: 1.5rem;
+        padding: 1%;
+    }
+
+    div.productSpecification-layout table td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    div.productSpecification-layout {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    div.productSpecification-layout h2 {
+        font-size: 1.2rem;
+        padding: 1%;
+    }
+
+    div.productSpecification-layout table td {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+}
