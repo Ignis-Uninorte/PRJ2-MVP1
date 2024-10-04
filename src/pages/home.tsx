@@ -1,8 +1,9 @@
 import React from 'react';
 import MainLayout from '../layouts/MainLayout';
 import FeaturedProducts from '../components/Featured_Products';
-import Banner from '../components/Banner';
-import PromotionalImages from '../components/PromotionalImages'; // Use the new PromotionalImages component
+
+import LowerBanner from '../components/LowerBanner';
+import PImg from '../components/PImg';
 import BI from '../assets/banner_img.gif';
 import Breadcrumb from '../components/Breadcrumb';
 
@@ -18,10 +19,10 @@ const Home: React.FC = () => {
 
         {/* Featured Products and Banner */}
         <FeaturedProducts />
-        <Banner 
-          imageUrl={BI}
-          altText="Banner"
-        />
+        <LowerBanner 
+        imageUrl={BI}
+        altText="LowerBanner"
+      />
       </div>
     </MainLayout>
   );
