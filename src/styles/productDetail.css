@@ -83,6 +83,27 @@ div.price-discount p.discount {
     min-width: 100px;
 }
 
+.product-details button {
+    width: 140px;
+    height: 40px;
+    background-color: #FD8916;
+    color: white;
+    border: none;
+    margin: 15px 0px;
+    align-self: center;
+    padding: 8px 16px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+.product-details button:hover {
+    background-color: #7697a0;
+}
+
+.product-details i.fa-solid.fa-cart-shopping {
+    padding-right: 5px;
+}
+
 .product-details .product-characteristics {
     display: flex;
     flex-wrap: wrap;

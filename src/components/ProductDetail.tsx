@@ -5,7 +5,6 @@ import LoadingSpinner from '../components/Spinner';
 import ErrorComponent from '../components/Error';
 import Breadcrumb from '../components/Breadcrumb';
 
-
 interface ProductDetailProps {
     idProduct: string,
     category: string
@@ -47,9 +46,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({idProduct, category})  => 
                             </div>
                             <ul>
                                 {product?.description.map(
-                                    desc => <li><strong>{desc.title} </strong>{desc.description}</li>
+                                    desc => <li key={desc.title}><strong>{desc.title} </strong>{desc.description}</li>
                                 )}
                             </ul>
+                            <button type="button">
+                                <i className="fa-solid fa-cart-shopping"></i>Add to cart
+                            </button>
                         </section>
                     </section>
                 </div>

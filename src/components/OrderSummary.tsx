@@ -1,6 +1,6 @@
 // src/components/OrderSummary.tsx
 import React from 'react';
-import "../styles/OrderSummary.css"
+import "../styles/orderSummary.css"
 interface OrderSummaryProps {
   subtotal: number;
   shippingCost: number;
