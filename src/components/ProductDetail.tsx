@@ -1,6 +1,7 @@
 import {useGetProducts} from '../hooks/useGetProduct';
 import '../styles/productDetail.css';
 import {ProductItem} from '../types/plp.type' 
+import Breadcrumb from '../components/Breadcrumb';
 
 interface ProductDetailProps {
     idProduct: string,
@@ -27,6 +28,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({idProduct, category})  => 
             )}
             {!isLoading && !isError && isSuccess && products && (
                 <div className="product-layout">
+                    <Breadcrumb category={category} productName={product?.name} />
                     <div className="image-container-pd">
                         <img src={product?.image} alt="Product Image" className="img-product"/>
                     </div>
