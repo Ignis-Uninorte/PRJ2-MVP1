@@ -1,31 +1,76 @@
-
 .related-products {
-    margin-top: 2rem;
-  }
-  
-  .related-products h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
+  margin-top: 2rem;
+  padding: 0 1rem;
+  background-color: white;
+}
+
+.related-products h2 {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.related-products-list {
+  display: flex;
+  flex-wrap: nowrap; /* Cambia el valor de flex-wrap a 'nowrap' para evitar el salto de línea */
+  justify-content: flex-start; /* Alinea los elementos al inicio */
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  gap: 10px; /* Espacio entre los productos */
+  padding-bottom: 1rem; /* Añadir espacio inferior para el scroll */
+}
+
+.product-card {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+  flex: 0 0 auto; /* Asegura que las tarjetas no se encojan */
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 576px) {
   .related-products-list {
-    display: flex;
-    gap: 10%;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: nowrap; /* Asegurar que los elementos no se envuelvan */
+  }
+}
+
+/* Media Queries para pantallas medianas */
+@media (min-width: 768px) {
+  .related-products h2 {
+    font-size: 2rem;
+  }
+
+  .related-products-list {
+    flex-wrap: wrap; /* Para pantallas más grandes, los productos se alinean en varias filas */
     justify-content: center;
+    gap: 4%;
   }
-  
+
   .product-card {
-    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 992px) {
+  .related-products h2 {
+    font-size: 2.5rem;
+  }
+
+  .related-products-list {
+    flex-wrap: wrap;
+  }
+
+  .product-card {
     max-width: 300px;
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
   }
-  
-  .product-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+}
