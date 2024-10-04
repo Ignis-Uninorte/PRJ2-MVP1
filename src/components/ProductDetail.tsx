@@ -1,6 +1,8 @@
 import {useGetProducts} from '../hooks/useGetProduct';
 import '../styles/productDetail.css';
 import {ProductItem} from '../types/plp.type' 
+import LoadingSpinner from '../components/Spinner';
+import ErrorComponent from '../components/Error';
 
 interface ProductDetailProps {
     idProduct: string,
@@ -20,10 +22,10 @@ const ProductDetail: React.FC<ProductDetailProps> = ({idProduct, category})  => 
     return (
         <div>
             {isLoading && (
-                <p>Insertar Spinner</p>
+                <LoadingSpinner />
             )}
             {isError && (
-                <p>Insertar Error</p>
+                <ErrorComponent message="We couldn't find what you were looking for :("/>
             )}
             {!isLoading && !isError && isSuccess && products && (
                 <div className="product-layout">
