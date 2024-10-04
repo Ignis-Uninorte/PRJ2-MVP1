@@ -4,7 +4,6 @@ import MainLayout from '../layouts/MainLayout';
 import bannerImg from '../assets/banner-plp.jpg';
 import { products } from '../utils/data';
 import { ProductCard } from '../components/ProductCard';
-import {filtersData} from '../utils/dataFilter';
 import Filter from "../components/Filter"
 import Breadcrumb from '../components/Breadcrumb';
 
@@ -62,15 +61,15 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                         </form>
                     </div>
                 </section>
-                <aside className="filters-plp">
-                    <Filter filtersData={filtersData} categoria={typeOfProduct} />;
-                </aside>
-                <section className="content-plp">
+                    <aside className="filters-plp">
+                    <Filter categoria={typeOfProduct} /> {/* Pass category as prop */}
+                    </aside>
+                    <section className="content-plp">
                     <ul>
                         {sortedItems.map(item => (
-                            <li className="product" key={item.id}>
-                                <ProductCard product={item} />
-                            </li>
+                        <li className="product" key={item.id}>
+                            <ProductCard product={item} />
+                        </li>
                         ))}
                     </ul>
                 </section>
