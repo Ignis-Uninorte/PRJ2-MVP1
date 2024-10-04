@@ -3,7 +3,6 @@ import "../styles/plp.css";
 import MainLayout from '../layouts/MainLayout';
 import bannerImg from '../assets/banner-plp.jpg';
 import { ProductCard } from '../components/ProductCard';
-import { filtersData } from '../utils/dataFilter';
 import Filter from "../components/Filter";
 import Breadcrumb from '../components/Breadcrumb';
 import { useAllProducts } from '../hooks/useProducts'; // Import the hook
@@ -64,6 +63,7 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                         <h4>Order By</h4>
                         <form>
                             <select
+                                title='orderby-box'
                                 id="orderby-box"
                                 value={sortOption}
                                 onChange={(e) => setSortOption(e.target.value)} // Handle sorting option change
@@ -75,19 +75,19 @@ const Plp: React.FC<{ typeOfProduct: string }> = ({ typeOfProduct }) => {
                             </select>
                         </form>
                     </div>
-                </section>
-                <aside className="filters-plp">
-                    <Filter filtersData={filtersData} categoria={typeOfProduct} />
-                </aside>
-                <section className="content-plp">
-                    <ul>
-                        {sortedItems.map((item) => (
+                    </section>
+                        <aside className="filters-plp">
+                        <Filter categoria={typeOfProduct} /> {/* Pass category as prop */}
+                        </aside>
+                        <section className="content-plp">
+                        <ul>
+                            {sortedItems.map(item => (
                             <li className="product" key={item.id}>
-                                <ProductCard product={item} category={typeOfProduct}/>
+                                <ProductCard product={item} category={typeOfProduct} />
                             </li>
-                        ))}
-                    </ul>
-                </section>
+                            ))}
+                        </ul>
+                    </section>
                 <div className="banner-plp">
                     <img src={bannerImg} alt="Banner" />
                 </div>
